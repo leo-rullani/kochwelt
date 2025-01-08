@@ -9,6 +9,10 @@ html {
     scroll-behavior: smooth;
 }
 
+main {
+    flex-grow: 1;
+}
+
 @font-face {
     font-family: 'Raleway';
     src: url('/raleway/Raleway-VariableFont_wght.ttf') format('truetype');
@@ -16,6 +20,12 @@ html {
 
 body {
     font-family: 'Raleway', sans-serif;
+    display: flex;
+    flex-direction: column;
+}
+
+.header-logo {
+    height: 50px;
 }
 
 img {
@@ -63,4 +73,36 @@ nav {
     align-self: flex-end;
 }
 
-/*footer {
+footer {
+    background-color: #403b3b;
+    padding: 2rem 0; 
+    /* Da wir im .footer-content bereits flexen, 
+       kann hier der einfache Innenabstand reichen */
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+.footer-logo img {
+    height: 50px; 
+}
+
+.footer-logos {
+    display: flex;
+    gap: 2rem;
+}
+
+.footer-logos img {
+    height: 1.8rem;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+.footer-logos img:hover {
+    filter: drop-shadow(0px 0px 4px #FFFF);
+    transform: scale(1.1);
+}
