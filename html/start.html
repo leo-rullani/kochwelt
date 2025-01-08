@@ -6,34 +6,100 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Kochwelt</title>
 
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap"
-        rel="stylesheet">
+    <!-- integration of favicon -->
+    <link rel="icon" href="/kochwelt/img/logo_small.png" type="image/png">
 
-</head>
+    <!-- integration of css styles -->
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/start.css">
+    <link rel="stylesheet" href="../css/rezept.css">
+    <link rel="stylesheet" href="../css/kontakt.css">
+    <link rel="stylesheet" href="../css/impressum.css">
 
 <body>
-    <header>
-        <h1>Kochwelt</h1>
-        <nav>
-            <ul>
-                <li><a href="start.html">Start</a></li>
-                <li><a href="rezept.html">Rezept des Tages</a></li>
-                <li><a href="kontakt.html">Kontakt</a></li>
-                <li><a href="impressum.html">Impressum</a></li>
-            </ul>
-        </nav>
-    </header>
+    <section>
+        <header class="outer-padding">
+            <div class="logo">
+                <img src="/kochwelt/img/logo.png" alt="Kochwelt Logo">
+            </div>
+            <nav>
+                <a href="start.html">Start</a>
+                <a href="rezept.html" class="active">Rezept des Tages</a>
+                <a href="kontakt.html">Kontakt</a>
+                <a href="impressum.html">Impressum</a>
+            </nav>
+        </header>
+    </section>
 
-    <main>
-        <h2>Willkommen bei Kochwelt!</h2>
-        <p>Entdecke köstliche Rezepte, hilfreiche Tipps und vieles mehr!</p>
-    </main>
+    <section class="atf outer-padding marg-top">
+        <div class="atf-content">
+            <div class="atf-image">
+                <img src="/kochwelt/img/tacos-vegetarianos.png" alt="Tacos-Vegetarianos">
+            </div>
+            <div class="atf-text">
+                <h2>Tacos Vegetarianos</h2>
+                <p>Unsere köstlichen Tacos Vegetarianos sind eine Hommage an die Vielfalt und Frische der mexikanischen
+                    Küche. Sie beginnen mit weichen, handgemachten Maistortillas, die sorgfältig mit einer herzhaften
+                    Mischung aus schwarzen Bohnen, saftigen Tomaten, knackigem Paprika und süßen Maiskörnern gefüllt
+                    werden.</p>
+                <button onclick="location.href='rezept.html';" class="rezept-button">Rezept öffnen</button>
+            </div>
+        </div>
+    </section>
 
-    <footer>
-        <p>2025 Kochwelt. Alle Rechte vorbehalten.</p>
-    </footer>
+    <section class="mexican-food">
+        <h2>Lust auf was Neues?</h2>
+        <div class="mexican-meals">
+            <div class="mexican-meal">
+                <img src="/kochwelt/img/tacos-vegetarianos.png" alt="Tacos Vegetarianos">
+                <p>Tacos Vegetarianos</p>
+            </div>
+            <div class="mexican-meal">
+                <img src="/kochwelt/img/enchiladas.png" alt="Enchiladas">
+                <p>Enchiladas</p>
+            </div>
+            <div class="mexican-meal">
+                <img src="/kochwelt/img/quesadilla.png" alt="Quesadillas">
+                <p>Quesadillas</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="comparison-section outer-padding">
+        <h2>Ofen vs Pfanne – Was passt besser?</h2>
+        <div class="comparison-content">
+            <div class="comparison-text">
+                <p>
+                    In der mexikanischen Küche spielt die Wahl der Zubereitungsmethode eine entscheidende Rolle.
+                    Ein Ofen eignet sich ideal für Enchiladas oder gefüllte Paprika. Die gleichmäßige Hitze sorgt für perfekt geschmolzenen Käse und aromatische Gerichte.
+                    Die Pfanne ist perfekt für frische Gerichte wie Tacos. Zutaten wie Paprika und Fleisch erhalten ein intensives Röstaroma.
+                </p>
+                <p>
+                    Beide Methoden haben ihre Vorteile – es kommt auf das Gericht an!
+                </p>
+            </div>
+            <div class="comparison-image">
+                <img src="/kochwelt/img/ofenvspfanne.png" alt="Ofen vs Pfanne">
+            </div>
+        </div>
+    </section>    
+
+    <footer class="outer-padding">
+        <div class="footer-content">
+            <div class="footer-logo">
+                <img src="/kochwelt/img/logo.png" alt="Kochwelt Logo">
+            </div>
+            <div class="footer-logos">
+                <img src="/kochwelt/img/icons/facebook.icon.png" alt="Facebook Logo">
+                <img src="/kochwelt/img/icons/instagram.icon.png" alt="Instagram Logo">
+                <img src="/kochwelt/img/icons/twitter.icon.png" alt="Twitter Logo">
+            </div>
+        </div>
+    </footer>    
+
+    <!-- integration of js styles -->
+    <script src="script.js"></script>
+
 </body>
 
 </html>

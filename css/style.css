@@ -1,9 +1,66 @@
-/* 
-.header
-.link
-.button
-.image
-.font-family
-.background-color
-.footer
-*/
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    overflow-wrap: break-word;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+@font-face {
+    font-family: 'Raleway';
+    src: url('/raleway/Raleway-VariableFont_wght.ttf') format('truetype');
+}
+
+body {
+    font-family: 'Raleway', sans-serif;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+button {
+    background-color: #008000;
+}
+
+a {
+    text-decoration: none;
+    /* color: black; */
+    font-size: 1rem;
+    font-weight: 600;
+    color: #403b3b;
+}
+
+a:hover {
+    text-decoration: underline;
+    text-decoration-thickness: 5px;
+    text-underline-offset: 16px;
+    color: #008000;
+    font-weight: bold;
+}
+
+.outer-padding {
+    padding-right: 10rem;
+    padding-left: 10rem;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;  
+    padding-top: 16px;
+    padding-bottom: 16px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+nav {
+    display: flex;
+    gap: 20px;
+    align-self: flex-end;
+}
+
+/*footer {
