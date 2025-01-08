@@ -16,13 +16,21 @@
     <link rel="stylesheet" href="../css/kontakt.css">
     <link rel="stylesheet" href="../css/impressum.css">
 
-<body>
+<body onload="init()">
     <section>
         <header class="outer-padding">
             <div>
                 <img class="header-logo" src="/kochwelt/img/logo.png" alt="Kochwelt Logo">
             </div>
-            <nav>
+
+            <!-- burger menu (responsive 950px) -->
+            <div class="menu-toggle" id="menu-toggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+
+            <nav id="main-nav">
                 <a href="start.html">Start</a>
                 <a href="rezept.html" class="active">Rezept des Tages</a>
                 <a href="kontakt.html">Kontakt</a>
@@ -74,11 +82,12 @@
                 <p>
                     In der mexikanischen Küche spielt die Wahl der Zubereitungsmethode eine entscheidende Rolle.
                     Ein Ofen eignet sich ideal für Enchiladas oder gefüllte Paprika. Die gleichmäßige Hitze sorgt
-                    für
-                    perfekt geschmolzenen Käse und aromatische Gerichte.
+                    für perfekt geschmolzenen Käse und aromatische Gerichte. Auch traditionelle Gerichte wie
+                    Tamales profitieren von der schonenden Wärme, die den Geschmack intensiviert. Zusätzlich kann
+                    der Ofen größere Portionen effizient zubereiten, ideal für Familienfeiern oder Partys.
                     Die Pfanne ist perfekt für frische Gerichte wie Tacos. Zutaten wie Paprika und Fleisch erhalten
-                    ein
-                    intensives Röstaroma.
+                    ein intensives Röstaroma, das durch die schnelle, hohe Hitze verstärkt wird. Besonders bei
+                    spontanen Mahlzeiten ist die Pfanne unschlagbar, da sie schneller einsatzbereit ist.
                 </p>
                 <br>
                 <p>
@@ -104,3 +113,9 @@
             </div>
         </div>
     </footer>
+
+    <script src="/js/script.js"></script>
+
+</body>
+
+</html>
