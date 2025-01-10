@@ -12,33 +12,51 @@
     <!-- integration of css styles -->
     <link rel="stylesheet" href="../css/style.css">
     <link rel="stylesheet" href="../css/start.css">
+    <link rel="stylesheet" href="../css/start_responsive.css">
     <link rel="stylesheet" href="../css/rezept.css">
     <link rel="stylesheet" href="../css/kontakt.css">
     <link rel="stylesheet" href="../css/impressum.css">
 
+</head>
+
 <body onload="init()">
+
     <section>
-        <header class="outer-padding">
-            <div>
-                <img class="header-logo" src="/kochwelt/img/logo.png" alt="Kochwelt Logo">
-            </div>
-
-            <!-- burger menu (responsive 950px) -->
-            <div class="menu-toggle" id="menu-toggle">
-                <span></span>
-                <span></span>
-                <span></span>
-            </div>
-
-            <nav id="main-nav">
-                <a href="start.html">Start</a>
-                <a href="rezept.html" class="active">Rezept des Tages</a>
-                <a href="kontakt.html">Kontakt</a>
-                <a href="impressum.html">Impressum</a>
-            </nav>
-        </header>
+      <header class="outer-padding">
+        <!-- Logo -->
+        <div>
+          <img class="header-logo" src="/kochwelt/img/logo.png" alt="Kochwelt Logo">
+        </div>
+  
+        <!-- Desktop-Navigation (> 950px) -->
+        <nav class="desktop-nav">
+          <a href="start.html">Start</a>
+          <a href="rezept.html">Rezept des Tages</a>
+          <a href="kontakt.html">Kontakt</a>
+          <a href="impressum.html">Impressum</a>
+        </nav>
+  
+        <!-- Burger-Menü (< 950px) -->
+        <div id="menu-toggle" class="menu-toggle">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+  
+        <!-- Mobile Navigation -->
+        <nav id="side-menu" class="resp_menu_box resp_menu_closed">
+          <button id="menu-close-btn" class="close-btn">×</button>
+          <ul>
+            <li><a href="start.html">Start</a></li>
+            <li><a href="rezept.html">Rezept des Tages</a></li>
+            <li><a href="kontakt.html">Kontakt</a></li>
+            <li><a href="impressum.html">Impressum</a></li>
+          </ul>
+        </nav>
+      </header>
     </section>
 
+    <!-- section: atf -->
     <section class="atf outer-padding marg-top">
         <div class="atf-content">
             <div class="atf-image">
@@ -46,11 +64,16 @@
             </div>
             <div class="atf-text">
                 <h2>Tacos Vegetarianos</h2>
-                <p>Unsere köstlichen Tacos Vegetarianos sind eine Hommage an die Vielfalt und Frische der mexikanischen
-                    Küche. Sie beginnen mit weichen, handgemachten Maistortillas, die sorgfältig mit einer herzhaften
+                <p>Unsere köstlichen Tacos Vegetarianos sind eine Hommage an die Vielfalt und Frische der
+                    mexikanischen
+                    Küche. Sie beginnen mit weichen, handgemachten Maistortillas, die sorgfältig mit einer
+                    herzhaften
                     Mischung aus schwarzen Bohnen, saftigen Tomaten, knackigem Paprika und süßen Maiskörnern gefüllt
                     werden.</p>
-                <button onclick="location.href='rezept.html';" class="rezept-button">Rezept öffnen</button>
+                <button class="rezept-button" onclick="window.location.href='rezept.html'">
+                    Rezept öffnen
+                </button>
+
             </div>
         </div>
     </section>
@@ -60,16 +83,22 @@
         <h2>Lust auf was Neues?</h2>
         <div class="mexican-meals outer-padding">
             <div class="mexican-meal">
-                <img src="/kochwelt/img/tacos-vegetarianos.png" alt="Tacos Vegetarianos">
-                <p>Tacos Vegetarianos</p>
+                <a href="rezept.html">
+                    <img src="/kochwelt/img/tacos-vegetarianos.png" alt="Tacos Vegetarianos">
+                    <p>Tacos Vegetarianos</p>
+                </a>
             </div>
             <div class="mexican-meal">
-                <img src="/kochwelt/img/enchiladas.png" alt="Enchiladas">
-                <p>Enchiladas</p>
+                <a href="rezept.html">
+                    <img src="/kochwelt/img/enchiladas.png" alt="Enchiladas">
+                    <p>Enchiladas</p>
+                </a>
             </div>
             <div class="mexican-meal">
-                <img src="/kochwelt/img/quesadilla.png" alt="Quesadillas">
-                <p>Quesadillas</p>
+                <a href="rezept.html">
+                    <img src="/kochwelt/img/quesadilla.png" alt="Quesadillas">
+                    <p>Quesadillas</p>
+                </a>
             </div>
         </div>
     </section>
@@ -98,8 +127,6 @@
         </div>
     </section>
 
-    </main>
-
     <!-- footer -->
     <footer class="outer-padding">
         <div class="footer-content">
@@ -107,14 +134,19 @@
                 <img src="/kochwelt/img/logo_white.png" alt="Kochwelt Logo">
             </div>
             <div class="footer-logos">
-                <img src="/kochwelt/img/icons/facebook.icon.png" alt="Facebook Logo">
-                <img src="/kochwelt/img/icons/instagram.icon.png" alt="Instagram Logo">
-                <img src="/kochwelt/img/icons/twitter.icon.png" alt="Twitter Logo">
+                <a href="https://www.facebook.com/" target="_blank" rel="noopener noreferrer">
+                    <img src="/kochwelt/img/icons/facebook.icon.png" alt="Facebook Logo">
+                </a>
+                <a href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer">
+                    <img src="/kochwelt/img/icons/instagram.icon.png" alt="Instagram Logo">
+                </a>
+                <a href="https://twitter.com/" target="_blank" rel="noopener noreferrer">
+                    <img src="/kochwelt/img/icons/twitter.icon.png" alt="Twitter Logo">
+                </a>
             </div>
-        </div>
     </footer>
 
-    <script src="/js/script.js"></script>
+    <script src="/js/start.js"></script>
 
 </body>
 
