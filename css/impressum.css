@@ -1,9 +1,99 @@
-/* 
-.header
-.link
-.button
-.image
-.font-family
-.background-color
-.footer
-*/
+#impressum {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+}
+
+.impressum-text {
+    align-items: center;   
+}
+
+.impressum-text h2 {
+    font-size: 1rem;
+}
+
+.impressum-text p {
+    font-size: 1rem;
+}
+
+.impressum-text a {
+    font-size: 1rem
+}
+
+.impressum-adresse {
+    padding-right: 1rem; 
+    margin-right: 16px;  
+}
+
+.impressum-id { 
+    font-size: 1rem;  
+    padding-left: 16px;   
+}
+
+#impressum p{
+    padding-bottom: 24px;
+}
+
+#brmedia {
+    display: none;
+}
+
+@media (max-width: 1300px) {
+    .outer-padding {
+        padding-left: 6rem; 
+        padding-right: 6rem;
+    }
+    
+}
+@media (max-width: 900px) {
+    #brmedia {
+        display: block;
+    }
+    .impressum-adresse {
+        font-size: 1rem;
+        padding-top: 2rem;
+    }
+    .outer-padding {
+        padding-left: 4rem; 
+        padding-right: 4rem;
+    }
+    .impressum-text h2 {
+        font-size: 0.9rem;
+    }
+    
+    .impressum-text p {
+        font-size: 0.9rem;
+    }
+    
+    .impressum-text a {
+        font-size: 0.9rem
+    }
+}
+@media (max-width: 600px) {
+    #impressum {
+        flex-direction: column;
+        align-items: center;    
+    }
+
+    .impressum-id {
+        padding-left: 0;
+    }
+    .outer-padding {
+        padding-left: 1.5rem; 
+        padding-right: 1.5rem;
+    }
+
+}
+    @media (max-width: 460px) {
+        .outer-padding {
+            padding-left: 0; 
+            padding-right: 0;
+        }
+        #brmedia {
+           display: block;
+        }
+        
+        
+}

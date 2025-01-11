@@ -1,11 +1,92 @@
 <!DOCTYPE html>
 <html lang="de">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Kochwelt</title>
+  <link rel="stylesheet" href="../css/style.css">
+  <link rel="stylesheet" href="../css/kontakt.css">
+  <link rel="stylesheet" href="../css/start.css">
+  <script src="script.js"></script>
+  <script src="email.js"></script>
 </head>
+
 <body>
-    
+
+  <section>
+    <header class="outer-padding">
+      <!-- Logo -->
+      <div>
+        <img class="header-logo" src="/kochwelt/img/logo.png" alt="Kochwelt Logo">
+      </div>
+
+      <!-- Desktop-Navigation (> 950px) -->
+      <nav class="desktop-nav">
+        <a href="start.html">Start</a>
+        <a href="rezept.html">Rezept des Tages</a>
+        <a href="kontakt.html">Kontakt</a>
+        <a href="impressum.html">Impressum</a>
+      </nav>
+
+      <!-- Burger-Menü (< 950px) -->
+      <div id="menu-toggle" class="menu-toggle">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+
+      <!-- Mobile Navigation -->
+      <nav id="side-menu" class="resp_menu_box resp_menu_closed">
+        <button id="menu-close-btn" class="close-btn">×</button>
+        <ul>
+          <li><a href="start.html">Start</a></li>
+          <li><a href="rezept.html">Rezept des Tages</a></li>
+          <li><a href="kontakt.html">Kontakt</a></li>
+          <li><a href="impressum.html">Impressum</a></li>
+        </ul>
+      </nav>
+    </header>
+  </section>
+
+  <section id="contacts" class="outer-padding">
+
+    <form class="contactinput" onsubmit="sendMail(event)">
+      <h2>Kontaktiere uns</h2>
+      <div class="input-headline">
+        <label for="name" class="input-field">Dein Name:</label>
+      </div>
+      <input id="name" type="text">
+      <div class="input-headline">
+        <label for="e-mail" class="input-field">Deine E-Mail:</label>
+      </div>
+      <input id="e-mail" type="email">
+      <div class="input-headline">
+        <label for="textinput" class="input-field">Deine Nachricht:</label>
+      </div>
+      <textarea name="textinput" id="text-area"></textarea>
+      <input type="submit" value="Abschicken" id="input-button">
+    </form>
+
+  </section>
+
+  <footer class="outer-padding">
+    <div class="footer-content">
+      <div class="footer-logo">
+        <img src="/kochwelt/img/logo_white.png" alt="Kochwelt Logo">
+      </div>
+      <div class="footer-logos">
+        <a href="https://www.facebook.com/" target="_blank" rel="noopener noreferrer">
+          <img src="/kochwelt/img/icons/facebook.icon.png" alt="Facebook Logo">
+        </a>
+        <a href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer">
+          <img src="/kochwelt/img/icons/instagram.icon.png" alt="Instagram Logo">
+        </a>
+        <a href="https://twitter.com/" target="_blank" rel="noopener noreferrer">
+          <img src="/kochwelt/img/icons/twitter.icon.png" alt="Twitter Logo">
+        </a>
+      </div>
+
 </body>
+
 </html>

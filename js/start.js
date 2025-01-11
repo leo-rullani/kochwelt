@@ -40,11 +40,9 @@ function toggleMenu() {
    */
   const menu = document.getElementById("side-menu");
 
-  // If the side menu exists, toggle the "resp_menu_closed" class
   if (menu) {
       menu.classList.toggle("resp_menu_closed");
   }
 }
 
-// Initialize the menu functionality when the script is executed
 init();

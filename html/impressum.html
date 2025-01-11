@@ -1,11 +1,119 @@
 <!DOCTYPE html>
 <html lang="de">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Kochwelt</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="contact.css">
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/impressum.css">
+    <link rel="stylesheet" href="../css/start.css">
+    <script src="script.js"></script>
+    <script src="email.js"></script>
 </head>
+
 <body>
-    
+
+    <section>
+        <header class="outer-padding">
+            <!-- Logo -->
+            <div>
+                <img class="header-logo" src="/kochwelt/img/logo.png" alt="Kochwelt Logo">
+            </div>
+
+            <!-- Desktop-Navigation (> 950px) -->
+            <nav class="desktop-nav">
+                <a href="start.html">Start</a>
+                <a href="rezept.html">Rezept des Tages</a>
+                <a href="kontakt.html">Kontakt</a>
+                <a href="impressum.html">Impressum</a>
+            </nav>
+
+            <!-- Burger-Menü (< 950px) -->
+            <div id="menu-toggle" class="menu-toggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+
+            <!-- Mobile Navigation -->
+            <nav id="side-menu" class="resp_menu_box resp_menu_closed">
+                <button id="menu-close-btn" class="close-btn">×</button>
+                <ul>
+                    <li><a href="start.html">Start</a></li>
+                    <li><a href="rezept.html">Rezept des Tages</a></li>
+                    <li><a href="kontakt.html">Kontakt</a></li>
+                    <li><a href="impressum.html">Impressum</a></li>
+                </ul>
+            </nav>
+        </header>
+    </section>
+
+    <section id="impressum" class="outer-padding">
+
+        <div class="impressum-adresse impressum-text">
+
+            <h2>Impressum</h2>
+
+            <p>Muster GmbH<br />
+                Musterstra&szlig;e 111<br />
+                Geb&auml;ude 44<br />
+                90210 Musterstadt</p>
+
+            <p><strong>Vertreten durch:</strong><br />
+                Leo Rullani<br />
+                Marcel G&ouml;hn<br />
+                Anika Schmidt</p>
+
+            <p><strong>Vorsitzender des Aufsichtsrats:</strong><br />
+                Richard Amtmann</p>
+
+            <h2>Kontakt</h2>
+            <p>Telefon: +49 (0) 123 44 55 66<br />
+                Telefax: +49 (0) 123 44 55 99<br />
+                E-Mail: <a href="">mustermann@<br id="brmedia">musterfirma.de</p></a>
+
+        </div>
+
+        <div class="impressum-id impressum-text">
+
+            <h2>Umsatzsteuer-ID</h2>
+            <p>Umsatzsteuer-Identifikationsnummer<br id="brmedia"> gem&auml;&szlig; &sect; 27 a
+                Umsatzsteuergesetz:<br />
+                DE999999999</p>
+
+            <h2>Redaktionell verantwortlich</h2>
+            <p>Beate Beispielhaft<br />
+                Musterstra&szlig;e 110<br />
+                90210 Musterstadt</p>
+
+            <h2>Verbraucher&shy;streit&shy;beilegung/ <br id="brmedia">Universal&shy;schlichtungs&shy;stelle</h2>
+            <p>Wir sind nicht bereit oder verpflichtet,<br id="brmedia"> an Streitbeilegungs&shy;verfahren vor<br />
+                einer Verbraucherschlichtungs&shy;stelle<br id="brmedia"> teilzunehmen.</p>
+
+        </div>
+
+    </section>
+
+    <footer class="outer-padding">
+        <div class="footer-content">
+            <div class="footer-logo">
+                <img src="/kochwelt/img/logo_white.png" alt="Kochwelt Logo">
+            </div>
+            <div class="footer-logos">
+                <a href="https://www.facebook.com/" target="_blank" rel="noopener noreferrer">
+                    <img src="/kochwelt/img/icons/facebook.icon.png" alt="Facebook Logo">
+                </a>
+                <a href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer">
+                    <img src="/kochwelt/img/icons/instagram.icon.png" alt="Instagram Logo">
+                </a>
+                <a href="https://twitter.com/" target="_blank" rel="noopener noreferrer">
+                    <img src="/kochwelt/img/icons/twitter.icon.png" alt="Twitter Logo">
+                </a>
+            </div>
+
 </body>
+
 </html>
