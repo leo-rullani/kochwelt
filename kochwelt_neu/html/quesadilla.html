@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kochwelt</title>
+
+    <link rel="icon" href="/kochwelt/img/logo_small.png" type="image/png">
+
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/quesadilla.css">
+</head>
+
+<body id="loadingList">
+
+    <section>
+        <header class="outer-padding">
+            <!-- Logo -->
+            <div>
+                <a href="../html/start.html">
+                <img class="header-logo" src="/kochwelt/img/logo.png" alt="Kochwelt Logo">
+                </a>
+            </div>
+
+            <!-- Desktop-Navigation (> 950px) -->
+            <nav class="desktop-nav">
+                <a href="start.html">Start</a>
+                <a href="tacos.html">Rezept des Tages</a>
+                <a href="kontakt.html">Kontakt</a>
+                <a href="impressum.html">Impressum</a>
+            </nav>
+
+            <!-- Burger-Menü (< 950px) -->
+            <div id="menu-toggle" class="menu-toggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+
+            <!-- Mobile Navigation -->
+            <nav id="side-menu" class="resp_menu_box resp_menu_closed">
+                <button id="menu-close-btn" class="close-btn">×</button>
+                <ul>
+                    <li><a href="start.html">Start</a></li>
+                    <li><a href="tacos.html">Rezept des Tages</a></li>
+                    <li><a href="kontakt.html">Kontakt</a></li>
+                    <li><a href="impressum.html">Impressum</a></li>
+                </ul>
+            </nav>
+        </header>
+    </section>
+
+    <h2 class="outer-padding">Quesadilla</h2>
+
+    <img class="outer-padding recipe-image" src="/kochwelt/img/quesadilla.png" alt="Quesadilla">
+
+    <div class="recipe-info outer-padding">
+        <div class="bg-grey">
+            <img src="/kochwelt/img/icons/clock-regular.svg" alt="Icon von einer Uhr">
+            <span>20 Minuten</span>
+        </div>
+        <div class="bg-grey">
+            <img src="/kochwelt/img/icons/brain-solid.svg" alt="Schwierigkeitsgrad">
+            <span>Leicht</span>
+        </div>
+        <div class="bg-grey">
+            <img src="/kochwelt/img/icons/calendar-alt-regular.svg" alt="Upload Datum vom Rezept">
+            <span>08.01.2025</span>
+        </div>
+    </div>
+
+    <div class="outer-padding">
+        <hr>
+    </div>
+
+    <div class="outer-padding input-field">
+        <span class="label" for="amount">Zutaten für</span>
+        <input name="amount" type="number" placeholder="1" id="input">
+        <button id="calcBtn">Portionen</button>
+    </div>
+
+    <section>
+        <h3 class="outer-padding">Für die Füllung:</h3>
+        <ul class="outer-padding" id="filling"></ul>
+        <h3 class="outer-padding">Für die Sauce:</h3>
+        <ul class="outer-padding" id="sauce"></ul>
+        <h3 class="outer-padding">Zubereitung:</h3>
+    </section>
+
+    <div class="recipe-info outer-padding">
+        <div class="bg-grey">
+            <img src="/kochwelt/img/icons/clock-regular.svg" alt="Icon von einer Uhr">
+            <span>Ca. 15 Minuten</span>
+        </div>
+        <div class="bg-grey">
+            <img src="/kochwelt/img/icons/clock-regular.svg" alt="Icon von einer Uhr">
+            <span>Gesamtzeit ca. 20 Minuten</span>
+        </div>
+    </div>
+
+    <section class="outer-padding">
+        <h3 class="subheader">1. Füllung vorbereiten:</h3>
+        <p>Geriebenen Käse in eine Schüssel geben. Zwiebel, rote Paprika, grüne Paprika und 
+           Champignons klein schneiden. Alles mit Mais und Kidneybohnen vermischen. 
+           Die Gewürze (Paprikapulver, Kreuzkümmel, Chilipulver) hinzufügen und gut vermengen.</p>
+    
+        <h3 class="subheader">2. Quesadillas zusammenstellen:</h3>
+        <p>Eine Tortilla-Wrap (ca. 25 cm Durchmesser) in einer Pfanne bei mittlerer Hitze erwärmen. Eine Hälfte mit der 
+           vorbereiteten Füllung belegen, dann die andere Hälfte darüberklappen. Leicht andrücken und 2–3 Minuten braten, 
+           bis der Käse schmilzt. Wenden und die andere Seite ebenfalls goldbraun braten.</p>
+    
+        <h3 class="subheader">3. Servieren:</h3>
+        <p>Die Quesadillas in Dreiecke schneiden und auf einem Teller anrichten. Mit Sauerrahm und Guacamole 
+           servieren. Guten Appetit!</p>
+    </section>    
+
+    <div class="outer-padding last-recipe-section">
+        <span class="recipe-creator">Rezept erstellt von</span>
+        <div class="creator">
+            <img class="profile-image" src="/kochwelt/img/profile.png" alt="Bild vom Autor">
+            <span>Anika Schmidt</span>
+        </div>
+    </div>
+
+    <footer class="outer-padding">
+        <div class="footer-content">
+            <div class="footer-logo">
+                <img src="/kochwelt/img/logo_white.png" alt="Kochwelt Logo">
+            </div>
+            <div class="footer-logos">
+                <a href="https://www.facebook.com/" target="_blank" rel="noopener noreferrer">
+                    <img src="/kochwelt/img/icons/facebook.icon.png" alt="Facebook Logo">
+                </a>
+                <a href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer">
+                    <img src="/kochwelt/img/icons/instagram.icon.png" alt="Instagram Logo">
+                </a>
+                <a href="https://twitter.com/" target="_blank" rel="noopener noreferrer">
+                    <img src="/kochwelt/img/icons/twitter.icon.png" alt="Twitter Logo">
+                </a>
+            </div>
+    </footer>
+    <script src="/js/tacos.js"></script>
+    <script src="/js/start.js"></script>
+</body>
+
+</html>

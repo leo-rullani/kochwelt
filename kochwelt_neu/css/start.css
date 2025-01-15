@@ -1,0 +1,189 @@
+.menu-toggle span {
+    width: 100%;
+    height: 3px;
+    background-color: #403b3b;
+    border-radius: 2px;
+    transition: 0.3s;
+}
+
+.resp_menu_box {
+    position: fixed;
+    top: 0; /* Sidebar startet von ganz oben */
+    right: 0;
+    width: 250px;
+    background-color: rgba(247, 245, 245, 0.7);
+    border-radius: 10px 0px 0px 10px;
+    backdrop-filter: blur(10px);
+    height: 100vh; /* Ganze Höhe des Bildschirms */
+    transform: translateX(100%); /* Sidebar standardmäßig ausgeblendet */
+    transition: all 250ms ease-in-out;
+    z-index: 999;
+    overflow-y: auto; /* Scrollbar bei Bedarf */
+}
+
+.resp_menu_box ul {
+    list-style: none;
+    margin: 0;
+    padding: 2rem 1rem;
+}
+
+.resp_menu_box li {
+    margin-bottom: 1.5rem;
+}
+
+.resp_menu_box li a {
+    text-decoration: none;
+    color: #403b3b;
+    display: block;
+}
+
+.resp_menu_box li a:hover {
+    color: #008001;
+}
+
+.close-btn {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 1.5rem;
+    color: #403b3b;
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+.resp_menu_closed {
+    transform: translateX(100%); /* Sidebar ausgeblendet */
+}
+
+@media (max-width: 950px) {
+    .desktop-nav {
+        display: none;
+    }
+    .menu-toggle {
+        display: flex;
+        align-items: center;
+    }
+}
+
+.atf {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.atf-content {
+    display: flex;
+    gap: 2rem;
+}
+
+.atf-image img {
+    margin-top: 5rem;
+    margin-bottom: 5rem;
+    margin-right: 5rem;
+    width: 100%;
+    height: auto;
+    border-radius: 5px;
+}
+
+.atf-text {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    margin-top: 5rem;
+}
+
+.atf-text h2 {
+    height: auto;
+    font-size: 1.5rem;
+    margin: 0;
+    display: flex;
+    align-items: center;
+}
+
+.atf-text p {
+    font-size: 1rem;
+    margin-top: 1rem;
+    margin-bottom: 4.5rem;
+}
+
+/* section mexican-food*/
+.mexican-food {
+    background-color: #F9F9F9;
+    text-align: center; 
+    padding: 2rem 0;
+    margin-bottom: 3rem;
+}
+
+.mexican-food h2 {
+    font-size: 1.5rem;
+    margin-bottom: 2rem; 
+    color: black; 
+}
+
+.mexican-meals {
+    display: flex;
+    justify-content: space-between;
+    gap: 1rem;
+}
+
+.mexican-meal {
+    text-align: center;
+    max-width: 250px;
+    margin-bottom: 2rem;
+    flex: 1 1 auto;
+}
+
+.mexican-meal:hover {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer;
+    transform: scale(1.1);
+}
+
+.mexican-meal img {
+    height: 250px;
+    width: 250px;
+    border-radius: 5px;
+    object-fit: cover;
+}
+
+.mexican-meal p {
+    font-size: 1rem;
+    font-weight: 600;
+    margin-top: 1rem;
+    color: black;
+}
+
+/* section comparison*/
+.comparison-section {
+    flex: 1;
+}
+
+.comparison-section h2 {
+    font-size: 1.5rem; 
+    margin-bottom: 2rem; 
+    color: black; 
+    text-align: center; 
+}
+
+.comparison-content {
+    display: flex;
+    justify-content: space-between; 
+    align-items: flex-start;
+    gap: 2rem;
+    text-align: left;
+    margin-bottom: 5rem;
+}
+
+.comparison-text {
+    flex: 1;
+    font-size: 1rem;
+    color: black;
+}
+
+.comparison-image {
+    height: 250px;
+    width: 250px;
+    border-radius: 5px;
+    object-fit: cover;
+}

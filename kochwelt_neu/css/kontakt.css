@@ -1,0 +1,116 @@
+#contacts {
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+    padding-top: 140px;
+    padding-bottom: 140px;
+}
+
+input {
+    border-color: white;
+    border-style: solid;
+    border-radius: 6px;
+    height: 90px;
+    width: 100%;  
+    font-size: 18px;
+    padding-left: 12px;
+}
+
+.contactinput {
+    background-color: #DCDCDC;
+    border-radius: 12px;
+    padding: 16px;
+    display: flex;
+    flex-direction: column;
+    width: 65%;
+    height: 50%;
+}
+
+.contactinput p {
+    padding-top: 40px;
+}
+
+#input-button {
+    margin-top: 48px;
+    width: 160px;
+    height: 160px;
+    border: none;
+    color: white;
+    background-color: #008000;;
+    border-radius: 6px;
+    align-self: center;
+    font-family: 'Raleway', sans-serif;
+}
+
+#text-area {
+    height: 800px;
+    border: 0;
+    border-radius: 12px;
+    padding: 12px;
+}
+
+.input-headline {
+    padding-top: 40px;
+}
+
+@media (max-width: 950px) {
+    .desktop-nav {
+        display: none;
+    }
+    .menu-toggle {
+        display: flex;
+        align-items: center;
+    }
+}
+
+@media (max-width: 900px) {
+    .outer-padding {
+        padding-left: 8rem;
+        padding-right: 8rem;
+    }
+}
+
+@media (max-width: 600px) {
+    .contactinput {
+    width: 80%;
+    height: 60%;   
+    }
+    input {
+        height: 60px;
+        border-radius: 4px;
+    }
+    .outer-padding {
+        padding-left: 4rem;
+        padding-right: 4rem;
+    }
+    .contactinput h2{
+        font-size: 20px;
+    }
+    #text-area {
+        height: 800px;
+        border: 0;
+        border-radius: 8px;
+    }
+    #input-button {
+        width: 180px;
+        height: 80px;
+        font-size: 16px;
+        margin-top: 12px;
+        
+    }
+}
+    @media (max-width: 400px) {
+        .outer-padding {
+            padding-left: 2rem;
+            padding-right: 2rem;
+        }
+        .contactinput h2{
+            font-size: 16px;
+        }
+        #input-button {
+            margin-top: 30px;
+            width: 140px;
+            height: 80px;
+            font-size: 16px;
+        }
+}

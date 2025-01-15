@@ -1,0 +1,16 @@
+// git pull
+// git add . 
+// git commit -m "first update"
+// git push
+
+// init from begin
+//git init
+//git add .
+// git commit -m "Initial commit for Kochwelt project"
+// git remote add origin https://github.com/leo-rullani/kochwelt
+// git branch -M main
+// git push -u origin main
+
+// eigene Bilder & Text
+// pro Person 1-2 Rezept
+// pro person 1-2 HTML-Datei
