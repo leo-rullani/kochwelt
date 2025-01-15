@@ -1,128 +1,163 @@
 let inputNumber = document.getElementById("input");
 let calcBtn = document.getElementById('calcBtn');
-let loadingList = document.getElementById('loadingList');
+let loadingMyList = document.getElementById('loadingMyList');
 
-let filling = [
-    { amount: 125, ingredient: 'g Tofu, klein gewürfelt' },
-    { amount: 50, ingredient: 'g rote Paprika, gewürfelt' },
-    { amount: 50, ingredient: 'g grüne Paprika, gewürfelt' },
-    { amount: 30, ingredient: 'g Zwiebel, gewürfelt' },
-    { amount: 30, ingredient: 'g Champignons, klein geschnitten' },
-    { amount: 30, ingredient: 'g Mais (aus der Dose, abgetropft)' },
-    { amount: 30, ingredient: 'g Kidneybohnen (aus der Dose, abgetropft)' },
-    { amount: 1, ingredient: 'g Paprikapulver' },
-    { amount: 1, ingredient: 'g Kreuzkümmel' },
-    { amount: 1, ingredient: 'g Chilipulver' },
-    { amount: 50, ingredient: 'g geriebener Käse (z. B. Cheddar oder Gouda)' },
-    { amount: 2, ingredient: ' kleine Tortilla-Wraps (Weizen oder Mais, ca. 60–70 g pro Wrap)' },
-];
+let fillingAmount = [
+    125,
+    50,
+    50,
+    30,
+    30,
+    30,
+    30,
+    1,
+    1,
+    1,
+    50,
+    2,
+]
 
-let sauce = [
-    { amount: 7, ingredient: 'ml Olivenöl' },
-    { amount: 7, ingredient: 'g Mehl' },
-    { amount: 125, ingredient: 'ml Gemüsebrühe' },
-    { amount: 12, ingredient: 'g Tomatenmark' },
-    { amount: 1, ingredient: 'g Paprikapulver' },
-    { amount: 1, ingredient: 'g Kreuzkümmel' },
-    { amount: 1, ingredient: 'g Chilipulver' },
-];
+let fillingIngredient = [
+    'g Tofu, klein gewürfelt',
+    'g rote Paprika, gewürfelt',
+    'g grüne Paprika, gewürfelt',
+    'g Zwiebel, gewürfelt',
+    'g Champignons, klein geschnitten',
+    'g Mais (aus der Dose, abgetropft)',
+    'g schwarze Bohnen (aus der Dose, abgetropft)',
+    'g Paprikapulver',
+    'g Kreuzkümmel',
+    'g Chilipulver',
+    'g geriebener Käse (z. B. Cheddar oder Gouda)',
+    '&nbsp;kleine Tortilla-Wraps (Weizen oder Mais, ca. 60–70 g pro Wrap)',
+]
+
+let sauceAmount = [
+    7,
+    7,
+    125,
+    12,
+    1,
+    1,
+    1,
+]
+
+let sauceIngredient = [
+    'ml Olivenöl',
+    'g Mehl',
+    'ml Gemüsebrühe',
+    'g Tomatenmark',
+    'g Paprikapulver',
+    'g Kreuzkümmel',
+    'g Chilipulver',
+]
 
 
-// Mit dieser Funktion wird die Rezeptliste ins HTML geladen (Funktion wird beim Aufrufen der Seite gestartet)
-function loadList(inners, outers) {
-    let fillingRef = document.getElementById('filling');
-    let sauceRef = document.getElementById('sauce');
-    fillingRef.innerHTML = ``;
-    sauceRef.innerHTML = ``;
+// Läd die Zutaten für die Füllung der Enchiladas.
+function loadListFilling(fAmount, fIngredient) {
+    let listRef = document.getElementById('filling');
+    listRef.innerHTML = ``;
 
-    for (let i = 0; i < inners.length; i++) {
-        let element = inners[i];
-        fillingRef.innerHTML += getFillingTemplate(element);
+    for (let i = 0; i < fAmount.length; i++) {
+        const amount = fAmount[i];
+        const ingredient = fIngredient[i];
+        listRef.innerHTML += fillingTemplate(amount, ingredient);
     }
+    loadListSauce(sauceAmount, sauceIngredient);
+}
 
-    for (let k = 0; k < outers.length; k++) {
-        let sauceFilling = outers[k];
-        sauceRef.innerHTML += getSauceTemplate(sauceFilling);
+
+//Template Funktion um die Zutaten der Füllung in das HTML zu schreiben.
+function fillingTemplate(amount, ingredient) {
+    return `<li>${amount}${ingredient}</li>`;
+}
+
+
+// Läd die Zutaten für die Sauce der Enchiladas.
+function loadListSauce(sAmount, sIngredient){
+    let listRef = document.getElementById('sauce');
+    listRef.innerHTML = ``;
+
+    for (let i = 0; i < sAmount.length; i++) {
+        const amount = sAmount[i];
+        const ingredient = sIngredient[i];
+        listRef.innerHTML += sauceTemplate(amount, ingredient);
     }
 }
 
-function getFillingTemplate(element) {
-    return `<li>${element.amount}${element.ingredient}</li>`
+
+// Template Funktion um die Zutaten der Sauce in das HTML zu schreiben.
+function sauceTemplate(amount, ingredient) {
+    return `<li>${amount}${ingredient}</li>`
 }
 
-function getSauceTemplate(sauceFilling) {
-    return `<li>${sauceFilling.amount}${sauceFilling.ingredient}</li>`
-}
 
+// Checkt die Conditions, ob das Input Feld richtig ausgefüllt würde. Startet außerdem die Portions Multiplizierung.
+function checkConditions() {
+    let inputValue = inputNumber.value.trim();
 
-function calculatePortions(inners, outers) {
-
-    loadList(filling, sauce);
-
-    if (Number(inputNumber.value == '')){
-        alert('Bitte eine Zahl für die gewünschte Portion eingeben.');
+    if (inputValue === '') {
+        alert('Bitte das Feld ausfüllen.');
         return;
     }
 
-    if (Number(inputNumber.value < 1)){
-        alert('Die eingegebene Menge darf 0 nicht unterschreiten. Bitte versuche es erneut mit einem positiven Wert.');
+    inputValue = Number(inputValue);
+
+    if (inputValue <= 0) {
+        alert('Die Portion kann nicht 0 betragen und darf nicht in den negativen Bereich gehen.');
         return;
     }
-        let changeInput = Number(inputNumber.value);
-        let fillingRef = document.getElementById('filling');
-        let sauceRef = document.getElementById('sauce');
-        fillingRef.innerHTML = ``;
-        sauceRef.innerHTML = ``;
+    calculateFillingPortions(fillingAmount, fillingIngredient, inputValue);
+}
 
-    // Die Kopie des ersten Arrays
-    let copiedFilling = [];
-    for (let i = 0; i < inners.length; i++) {
-        let originalItem = inners[i];
-        copiedFilling.push({ // Mit der push() Methode können die Key Value Paare in das kopierte Array geschrieben werden
-            amount: originalItem.amount, // Kopiert die Numbers
-            ingredient: originalItem.ingredient // Kopiert den Text
-        });
+
+// Multipliziert die Portionen der Füllung mit der eingegebenen Zahl aus dem Input Feld.
+function calculateFillingPortions(fAmount, fIngredient, value) {
+    let listRef = document.getElementById('filling');
+    listRef.innerHTML = ``;
+
+    for (let i = 0; i < fAmount.length; i++) {
+        const amount = fAmount[i];
+        const ingredient = fIngredient[i];
+        let multiply = amount * value;
+        listRef.innerHTML += resultTemplate(multiply, ingredient);
     }
+    calculateSaucePortions(sauceAmount, sauceIngredient, value);
+}
 
-    // Berechnung basierend auf der ersten Kopie
-    for (let i = 0; i < copiedFilling.length; i++) {
-        let element = copiedFilling[i];
-        element.amount *= changeInput;
-        fillingRef.innerHTML += calculatedFillings(element); // Hier wird die Funktion aufgerufen um das aktualisierte Rezept ins HTML zu schreiben
-    }
 
-    // Kopie des zweiten Arrays
-    let copiedSauce = [];
-    for (let k = 0; k < outers.length; k++) {
-        let originalSauce = outers[k];
-        copiedSauce.push({ // Mit der push() Methode können die Key Value Paare in das kopierte Array geschrieben werden
-            amount: originalSauce.amount,
-            ingredient: originalSauce.ingredient
-        });
-    }
+// Multipliziert die Portionen der Sauce mit der eingegebenen Zahl aus dem Input Feld.
+function calculateSaucePortions(sAmount, sIngredient, value) {
+    let listRef = document.getElementById('sauce');
+    listRef.innerHTML = ``;
 
-    // Berechnung des zweiten Arrays
-    for (let k = 0; k < copiedSauce.length; k++) {
-        let element = copiedSauce[k];
-        element.amount *= changeInput;
-        sauceRef.innerHTML += calculatedFillings(element); // Hier wird die Funktion aufgerufen um das aktualisierte Rezept ins HTML zu schreiben
+    for (let i = 0; i < sAmount.length; i++) {
+        const amount = sAmount[i];
+        const ingredient = sIngredient[i];
+        let multiply = amount * value;
+        listRef.innerHTML += resultTemplate(multiply, ingredient);
     }
 }
 
-// Schreibt das aktualisierte Rezept ins HTML
-function calculatedFillings(element) {
-    return `<li>${element.amount}${element.ingredient}</li>`
+
+// Schreibt die multiplizierte Portion ins HTML.
+function resultTemplate(multi, ingredient) {
+    return `<li>${multi}${ingredient}</li>`;
 }
 
-// Läd beim Aufrufen der Seite das Rezept
-loadingList.onload = function() {
-    loadList(filling, sauce);
+
+loadingMyList.onload = function() {
+    loadListFilling(fillingAmount, fillingIngredient);
 }
 
-// Durch das Klicken auf den "Portionen" Button wird diese Funktion aufgerufen
+
 calcBtn.onclick = function() {
-    calculatePortions(filling, sauce);
+    checkConditions();
 }
+
+
+
+
 
 /**
  * Initializes the event listeners for the menu toggle functionality.
@@ -154,6 +189,7 @@ function init() {
      */
     closeBtn.addEventListener("click", toggleMenu);
   }
+
   
   /**
   * Toggles the visibility of the side menu.
@@ -170,5 +206,6 @@ function init() {
         menu.classList.toggle("resp_menu_closed");
     }
   }
+
   
   init();

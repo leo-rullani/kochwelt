@@ -10,22 +10,23 @@
 
     <link rel="stylesheet" href="../css/style.css">
     <link rel="stylesheet" href="../css/enchiladas.css">
-    <link rel="shortcut icon" href="./img/logo_small.png" type="image/x-icon">
 </head>
 
-<body id="loadingList">
+<body id="loadingMyList">
 
     <section>
         <header class="outer-padding">
             <!-- Logo -->
             <div>
+                <a href="../html/start.html">
                 <img class="header-logo" src="/kochwelt/img/logo.png" alt="Kochwelt Logo">
+                </a>
             </div>
 
             <!-- Desktop-Navigation (> 950px) -->
             <nav class="desktop-nav">
                 <a href="start.html">Start</a>
-                <a href="rezept.html">Rezept des Tages</a>
+                <a href="tacos.html">Rezept des Tages</a>
                 <a href="kontakt.html">Kontakt</a>
                 <a href="impressum.html">Impressum</a>
             </nav>
@@ -42,7 +43,7 @@
                 <button id="menu-close-btn" class="close-btn">×</button>
                 <ul>
                     <li><a href="start.html">Start</a></li>
-                    <li><a href="rezept.html">Rezept des Tages</a></li>
+                    <li><a href="tacos.html">Rezept des Tages</a></li>
                     <li><a href="kontakt.html">Kontakt</a></li>
                     <li><a href="impressum.html">Impressum</a></li>
                 </ul>
@@ -51,8 +52,9 @@
     </section>
 
     <h2 class="outer-padding">Mexikanische Enchiladas</h2>
-
-    <img class="outer-padding recipe-image" src="/kochwelt/img/enchiladas.png" alt="Enchiladas">
+    <div class="outer-padding">
+    <img class="recipe-image" src="/kochwelt/img/enchiladas.png" alt="Enchiladas">
+    </div>
 
     <div class="recipe-info outer-padding">
         <div class="bg-grey">
@@ -80,8 +82,8 @@
     </div>
 
     <section>
-        <h3 class="outer-padding">Für die Füllung:</h3>
-        <ul class="outer-padding" id="filling"></ul>
+        <h3 class="outer-padding">Für die Füllung:</h3>    
+        <ul class="outer-padding" id="fillingAmount"></ul>  
         <h3 class="outer-padding">Für die Sauce:</h3>
         <ul class="outer-padding" id="sauce"></ul>
         <h3 class="outer-padding">Zubereitung:</h3>
@@ -124,7 +126,7 @@
     <div class="outer-padding last-recipe-section">
         <span class="recipe-creator">Rezept erstellt von</span>
         <div class="creator">
-            <img class="profile-image" src="/kochwelt/img/profile.png" alt="Bild vom Autor">
+            <img class="profile-image" src="/kochwelt/img/marcel.png" alt="Bild vom Autor">
             <span>Marcel Göhn</span>
         </div>
     </div>

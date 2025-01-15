@@ -25,17 +25,18 @@
 }
 
 .resp_menu_box {
-    position: absolute;
+    position: fixed;
     top: 25px;
     right: 0;
     width: 250px;
     background-color: rgba(247, 245, 245, 0.7);
     border-radius: 10px 0px 0px 10px;
     backdrop-filter: blur(10px);
-    height: 20vh;
+    height: auto;
     transform: translateX(0);          
     transition: all 250ms ease-in-out;
     z-index: 999;
+    overflow-x: hidden;
 }
 
 .resp_menu_box ul {
@@ -90,6 +91,7 @@ h2 {
     object-fit: cover;
     object-position: center;
     margin-top: 1.5rem;
+    border-radius: 5px;
 }
 
 .recipe-info {
@@ -151,7 +153,11 @@ li {
     align-items: center;
 }
 
-li:nth-child(odd) {
+#filling li:nth-child(odd) {
+    background-color: #EFEFEF;
+}
+
+#sauce li:nth-child(odd) {
     background-color: #EFEFEF;
 }
 

@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tacos Vegetarianos</title>
+
+    <link rel="icon" href="/kochwelt/img/logo_small.png" type="image/png">
+
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/enchiladas.css">
+    <link rel="shortcut icon" href="./img/logo_small.png" type="image/x-icon">
+</head>
+
+<body id="loadingList">
+
+    <section>
+        <header class="outer-padding">
+            <!-- Logo -->
+            <div>
+                <img class="header-logo" src="/kochwelt/img/logo.png" alt="Kochwelt Logo">
+            </div>
+
+            <!-- Desktop-Navigation (> 950px) -->
+            <nav class="desktop-nav">
+                <a href="start.html">Start</a>
+                <a href="tacos.html">Rezept des Tages</a>
+                <a href="kontakt.html">Kontakt</a>
+                <a href="impressum.html">Impressum</a>
+            </nav>
+
+            <!-- Burger-Menü (< 950px) -->
+            <div id="menu-toggle" class="menu-toggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+
+            <!-- Mobile Navigation -->
+            <nav id="side-menu" class="resp_menu_box resp_menu_closed">
+                <button id="menu-close-btn" class="close-btn">×</button>
+                <ul>
+                    <li><a href="start.html">Start</a></li>
+                    <li><a href="tacos.html">Rezept des Tages</a></li>
+                    <li><a href="kontakt.html">Kontakt</a></li>
+                    <li><a href="impressum.html">Impressum</a></li>
+                </ul>
+            </nav>
+        </header>
+    </section>
+
+    <h2 class="outer-padding">Tacos Vegetarianos</h2>
+
+    <img class="outer-padding recipe-image" src="/kochwelt/img/tacos-vegetarianos.png" alt="Tacos Vegetarianos">
+
+    <div class="recipe-info outer-padding">
+        <div class="bg-grey">
+            <img src="/kochwelt/img/icons/clock-regular.svg" alt="Icon von einer Uhr">
+            <span>35 Minuten</span>
+        </div>
+        <div class="bg-grey">
+            <img src="/kochwelt/img/icons/brain-solid.svg" alt="Schwierigkeitsgrad">
+            <span>Moderat</span>
+        </div>
+        <div class="bg-grey">
+            <img src="/kochwelt/img/icons/calendar-alt-regular.svg" alt="Upload Datum vom Rezept">
+            <span>08.01.2025</span>
+        </div>
+    </div>
+
+    <div class="outer-padding">
+        <hr>
+    </div>
+
+    <div class="outer-padding input-field">
+        <span class="label" for="amount">Zutaten für</span>
+        <input name="amount" type="number" placeholder="1" id="input">
+        <button id="calcBtn">Portionen</button>
+    </div>
+
+    <section>
+        <h3 class="outer-padding">Für die Füllung:</h3>
+        <ul class="outer-padding" id="filling"></ul>
+        <h3 class="outer-padding">Für die Sauce:</h3>
+        <ul class="outer-padding" id="sauce"></ul>
+        <h3 class="outer-padding">Zubereitung:</h3>
+    </section>
+
+    <div class="recipe-info outer-padding">
+        <div class="bg-grey">
+            <img src="/kochwelt/img/icons/clock-regular.svg" alt="Icon von einer Uhr">
+            <span>Ca. 25 Minuten</span>
+        </div>
+        <div class="bg-grey">
+            <img src="/kochwelt/img/icons/clock-regular.svg" alt="Icon von einer Uhr">
+            <span>Gesamtzeit ca. 35 Minuten</span>
+        </div>
+    </div>
+
+    <section class="outer-padding">
+        <h3 class="subheader">1. Füllung vorbereiten:</h3>
+        <p>Tofu (125 g) in kleine Würfel schneiden und in einer Pfanne mit etwas Olivenöl (7 ml) anbraten (ca. 5
+            Minuten).
+            Zwiebel (30 g), rote Paprika (50 g), grüne Paprika (50 g) und Champignons (30 g) hinzufügen und ca. 3–4
+            Minuten anbraten.
+            Mais (30 g), Kidneybohnen (30 g) und die Gewürze (Paprikapulver, Kreuzkümmel, Chilipulver, je 1 g)
+            einrühren.
+            Mit Salz und Pfeffer abschmecken und beiseitestellen.</p>
+        <h3 class="subheader">2. Tacosauce zubereiten:</h3>
+        <p>Olivenöl (7 ml) in einem kleinen Topf erhitzen und Mehl (7 g) einrühren. Unter Rühren ca. 1 Minute
+            anschwitzen.
+            Gemüsebrühe (125 ml), Tomatenmark (12 g) und die Gewürze (Paprikapulver, Kreuzkümmel, Chilipulver, je 1 g)
+            hinzufügen.
+            Unter Rühren aufkochen und 2–3 Minuten köcheln lassen, bis die Sauce eindickt. Mit Salz und Pfeffer
+            abschmecken.</p>
+        <h3 class="subheader">3. Tacos zusammenstellen:</h3>
+        <p>Die Füllung gleichmäßig auf die 2 Tortilla-Wraps (je ca. 60–70 g) verteilen. Die Wraps entweder rollen oder
+            halb offen lassen.
+            Mit der Tacosauce beträufeln und geriebenen Käse (50 g) darauf verteilen.</p>
+        <h3 class="subheader">4. Servieren:</h3>
+        <p>Die Tacos auf einem Teller anrichten und nach Belieben mit frischem Koriander oder Limettenscheiben
+            garnieren. Guten Appetit!</p>
+    </section>
+
+    <div class="outer-padding last-recipe-section">
+        <span class="recipe-creator">Rezept erstellt von</span>
+        <div class="creator">
+            <img class="profile-image" src="/kochwelt/img/leo_rullani.png" alt="Bild vom Autor">
+            <span>Leo Rullani</span>
+        </div>
+    </div>
+
+    <footer class="outer-padding">
+        <div class="footer-content">
+            <div class="footer-logo">
+                <img src="/kochwelt/img/logo_white.png" alt="Kochwelt Logo">
+            </div>
+            <div class="footer-logos">
+                <a href="https://www.facebook.com/" target="_blank" rel="noopener noreferrer">
+                    <img src="/kochwelt/img/icons/facebook.icon.png" alt="Facebook Logo">
+                </a>
+                <a href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer">
+                    <img src="/kochwelt/img/icons/instagram.icon.png" alt="Instagram Logo">
+                </a>
+                <a href="https://twitter.com/" target="_blank" rel="noopener noreferrer">
+                    <img src="/kochwelt/img/icons/twitter.icon.png" alt="Twitter Logo">
+                </a>
+            </div>
+    </footer>
+    <script src="/js/tacos.js"></script>
+    <script src="/js/start.js"></script>
+</body>
+
+</html>

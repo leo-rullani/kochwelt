@@ -1,88 +1,193 @@
 let inputNumber = document.getElementById("input");
-let calcBtn = document.getElementById("calcBtn");
-let loadingList = document.getElementById("loadingList");
+let calcBtn = document.getElementById('calcBtn');
+let loadingMyList = document.getElementById('loadingMyList');
 
-let filling = [
-    { amount: 125, ingredient: "g geriebener Käse (z. B. Cheddar oder Mozzarella)" },
-    { amount: 50, ingredient: "g rote Paprika, gewürfelt" },
-    { amount: 50, ingredient: "g grüne Paprika, gewürfelt" },
-    { amount: 30, ingredient: "g Zwiebel, gewürfelt" },
-    { amount: 30, ingredient: "g Champignons, klein geschnitten" },
-    { amount: 30, ingredient: "g Mais (aus der Dose, abgetropft)" },
-    { amount: 30, ingredient: "g Kidneybohnen (aus der Dose, abgetropft)" },
-    { amount: 1, ingredient: "g Paprikapulver" },
-    { amount: 1, ingredient: "g Kreuzkümmel" },
-    { amount: 1, ingredient: "g Chilipulver" },
-    { amount: 2, ingredient: " große Tortilla-Wraps (Weizen oder Mais, ca. 25 cm Durchmesser)" },
-];
+let fillingAmount = [
+    2,
+    50,
+    50,
+    30,
+    30,
+    30,
+    30,
+]
 
-let sauce = [
-    { amount: 100, ingredient: "g Sauerrahm" },
-    { amount: 50, ingredient: "g Guacamole" },
-    { amount: 1, ingredient: "g Paprikapulver" },
-    { amount: 1, ingredient: "g Kreuzkümmel" },
-    { amount: 1, ingredient: "g Chilipulver" },
-];
+let fillingIngredient = [
+    ' Tortilla-Fladen',
+    'g geriebener Käse',
+    'g rote Paprika, klein gewürfelt',
+    'g Zwiebel, fein gehackt',
+    'g Champignons, klein geschnitten',
+    'g Mais (aus der Dose, abgetropft)',
+    'g schwarze Bohnen (aus der Dose, abgetropft)',
+]
 
-// Funktion zum Laden der Rezeptliste ins HTML
-function loadList(inners, outers) {
-    let fillingRef = document.getElementById("filling");
-    let sauceRef = document.getElementById("sauce");
-    fillingRef.innerHTML = ``;
-    sauceRef.innerHTML = ``;
+let sauceAmount = [
+    1,
+    2,
+    1,
+    1,
+    1,
+]
 
-    inners.forEach((item) => {
-        fillingRef.innerHTML += `<li>${item.amount} ${item.ingredient}</li>`;
-    });
+let sauceIngredient = [
+    ' reife Avocado',
+    ' EL Limettensaft',
+    ' Tomate klein gewürfelt',
+    ' Knoblauchzehe',
+    ' EL Koriander',
+]
 
-    outers.forEach((item) => {
-        sauceRef.innerHTML += `<li>${item.amount} ${item.ingredient}</li>`;
-    });
+
+// Läd die Zutaten für die Füllung der Enchiladas.
+function loadListFilling(fAmount, fIngredient) {
+    let listRef = document.getElementById('fillingAmount');
+    listRef.innerHTML = ``;
+
+    for (let i = 0; i < fAmount.length; i++) {
+        const amount = fAmount[i];
+        const ingredient = fIngredient[i];
+        listRef.innerHTML += fillingTemplate(amount, ingredient);
+    }
+    loadListSauce(sauceAmount, sauceIngredient);
 }
 
-// Funktion zur Berechnung der Portionsgrößen
-function calculatePortions(inners, outers) {
-    if (inputNumber.value.trim() === "") {
-        alert("Bitte eine Zahl für die gewünschte Portion eingeben.");
+
+//Template Funktion um die Zutaten der Füllung in das HTML zu schreiben.
+function fillingTemplate(amount, ingredient) {
+    return `<li>${amount}${ingredient}</li>`;
+}
+
+
+// Läd die Zutaten für die Sauce der Enchiladas.
+function loadListSauce(sAmount, sIngredient){
+    let listRef = document.getElementById('sauce');
+    listRef.innerHTML = ``;
+
+    for (let i = 0; i < sAmount.length; i++) {
+        const amount = sAmount[i];
+        const ingredient = sIngredient[i];
+        listRef.innerHTML += sauceTemplate(amount, ingredient);
+    }
+}
+
+
+// Template Funktion um die Zutaten der Sauce in das HTML zu schreiben.
+function sauceTemplate(amount, ingredient) {
+    return `<li>${amount}${ingredient}</li>`
+}
+
+
+// Checkt die Conditions, ob das Input Feld richtig ausgefüllt würde. Startet außerdem die Portions Multiplizierung.
+function checkConditions() {
+    let inputValue = inputNumber.value.trim();
+
+    if (inputValue === '') {
+        alert('Bitte das Feld ausfüllen.');
         return;
     }
 
-    if (Number(inputNumber.value) < 1) {
-        alert("Die eingegebene Menge darf 0 nicht unterschreiten. Bitte versuche es erneut mit einem positiven Wert.");
+    inputValue = Number(inputValue);
+
+    if (inputValue <= 0) {
+        alert('Die Portion kann nicht 0 betragen und darf nicht in den negativen Bereich gehen.');
         return;
     }
-
-    let changeInput = Number(inputNumber.value);
-
-    // Neue Füllung basierend auf der Portionsanzahl
-    let updatedFilling = inners.map((item) => ({
-        amount: item.amount * changeInput,
-        ingredient: item.ingredient,
-    }));
-
-    // Neue Sauce basierend auf der Portionsanzahl
-    let updatedSauce = outers.map((item) => ({
-        amount: item.amount * changeInput,
-        ingredient: item.ingredient,
-    }));
-
-    loadList(updatedFilling, updatedSauce);
+    calculateFillingPortions(fillingAmount, fillingIngredient, inputValue);
 }
 
-// Events hinzufügen
-calcBtn?.addEventListener("click", () => calculatePortions(filling, sauce));
-loadingList?.addEventListener("load", () => loadList(filling, sauce));
 
-// Menü-Funktionalität initialisieren
-function initMenu() {
+// Multipliziert die Portionen der Füllung mit der eingegebenen Zahl aus dem Input Feld.
+function calculateFillingPortions(fAmount, fIngredient, value) {
+    let listRef = document.getElementById('filling');
+    listRef.innerHTML = ``;
+
+    for (let i = 0; i < fAmount.length; i++) {
+        const amount = fAmount[i];
+        const ingredient = fIngredient[i];
+        let multiply = amount * value;
+        listRef.innerHTML += resultTemplate(multiply, ingredient);
+    }
+    calculateSaucePortions(sauceAmount, sauceIngredient, value);
+}
+
+
+// Multipliziert die Portionen der Sauce mit der eingegebenen Zahl aus dem Input Feld.
+function calculateSaucePortions(sAmount, sIngredient, value) {
+    let listRef = document.getElementById('sauce');
+    listRef.innerHTML = ``;
+
+    for (let i = 0; i < sAmount.length; i++) {
+        const amount = sAmount[i];
+        const ingredient = sIngredient[i];
+        let multiply = amount * value;
+        listRef.innerHTML += resultTemplate(multiply, ingredient);
+    }
+}
+
+
+// Schreibt die multiplizierte Portion ins HTML.
+function resultTemplate(multi, ingredient) {
+    return `<li>${multi}${ingredient}</li>`;
+}
+
+
+loadingMyList.onload = function() {
+    loadListFilling(fillingAmount, fillingIngredient);
+}
+
+
+calcBtn.onclick = function() {
+    checkConditions();
+}
+
+/**
+ * Initializes the event listeners for the menu toggle functionality.
+ * Checks if the required DOM elements exist before adding event listeners.
+ */
+function init() {
+    /**
+     * @type {HTMLElement | null} toggle - The menu toggle button element.
+     */
     const toggle = document.getElementById("menu-toggle");
+  
+    /**
+     * @type {HTMLElement | null} closeBtn - The menu close button element.
+     */
     const closeBtn = document.getElementById("menu-close-btn");
+  
+    // If either toggle or close button is not found, stop further execution
+    if (!toggle || !closeBtn) return;
+  
+    /**
+     * Add a click event listener to the toggle button.
+     * @listens click
+     */
+    toggle.addEventListener("click", toggleMenu);
+  
+    /**
+     * Add a click event listener to the close button.
+     * @listens click
+     */
+    closeBtn.addEventListener("click", toggleMenu);
+  }
+
+  
+  /**
+  * Toggles the visibility of the side menu.
+  * This function adds or removes the `resp_menu_closed` class
+  * on the side menu element.
+  */
+  function toggleMenu() {
+    /**
+     * @type {HTMLElement | null} menu - The side menu element.
+     */
     const menu = document.getElementById("side-menu");
-
-    if (toggle && closeBtn && menu) {
-        toggle.addEventListener("click", () => menu.classList.toggle("resp_menu_closed"));
-        closeBtn.addEventListener("click", () => menu.classList.toggle("resp_menu_closed"));
+  
+    if (menu) {
+        menu.classList.toggle("resp_menu_closed");
     }
-}
-
-initMenu();
+  }
+  
+  
+  init();

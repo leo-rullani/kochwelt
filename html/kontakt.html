@@ -6,10 +6,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Kochwelt</title>
   <link rel="stylesheet" href="../css/style.css">
-  <link rel="stylesheet" href="../css/kontakt.css">
+  <link rel="stylesheet" href="../css/contact.css">
+  <link rel="stylesheet" href="../css/start_responsive.css">
   <link rel="stylesheet" href="../css/start.css">
-  <script src="script.js"></script>
-  <script src="email.js"></script>
 </head>
 
 <body>
@@ -18,13 +17,15 @@
     <header class="outer-padding">
       <!-- Logo -->
       <div>
+         <a href="../html/start.html"> 
         <img class="header-logo" src="/kochwelt/img/logo.png" alt="Kochwelt Logo">
+         </a>
       </div>
 
       <!-- Desktop-Navigation (> 950px) -->
       <nav class="desktop-nav">
         <a href="start.html">Start</a>
-        <a href="rezept.html">Rezept des Tages</a>
+        <a href="tacos.html">Rezept des Tages</a>
         <a href="kontakt.html">Kontakt</a>
         <a href="impressum.html">Impressum</a>
       </nav>
@@ -41,7 +42,7 @@
         <button id="menu-close-btn" class="close-btn">×</button>
         <ul>
           <li><a href="start.html">Start</a></li>
-          <li><a href="rezept.html">Rezept des Tages</a></li>
+          <li><a href="tacos.html">Rezept des Tages</a></li>
           <li><a href="kontakt.html">Kontakt</a></li>
           <li><a href="impressum.html">Impressum</a></li>
         </ul>
@@ -65,28 +66,32 @@
         <label for="textinput" class="input-field">Deine Nachricht:</label>
       </div>
       <textarea name="textinput" id="text-area"></textarea>
-      <input type="submit" value="Abschicken" id="input-button">
+      <button type="submit" id="input-button">Abschicken</button>
     </form>
 
   </section>
 
+  <!-- footer -->
   <footer class="outer-padding">
     <div class="footer-content">
       <div class="footer-logo">
-        <img src="/kochwelt/img/logo_white.png" alt="Kochwelt Logo">
+        <img src="../kochwelt/img/logo_white.png" alt="Kochwelt Logo">
       </div>
       <div class="footer-logos">
         <a href="https://www.facebook.com/" target="_blank" rel="noopener noreferrer">
-          <img src="/kochwelt/img/icons/facebook.icon.png" alt="Facebook Logo">
+          <img src="../kochwelt/img/icons/facebook.icon.png" alt="Facebook Logo">
         </a>
         <a href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer">
-          <img src="/kochwelt/img/icons/instagram.icon.png" alt="Instagram Logo">
+          <img src="../kochwelt/img/icons/instagram.icon.png" alt="Instagram Logo">
         </a>
         <a href="https://twitter.com/" target="_blank" rel="noopener noreferrer">
-          <img src="/kochwelt/img/icons/twitter.icon.png" alt="Twitter Logo">
+          <img src="../kochwelt/img/icons/twitter.icon.png" alt="Twitter Logo">
         </a>
       </div>
+  </footer>
 
+
+<script src="../js/start.js"></script>
 </body>
 
 </html>

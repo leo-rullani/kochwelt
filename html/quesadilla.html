@@ -4,22 +4,23 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Quesadilla</title>
+    <title>Kochwelt</title>
 
     <link rel="icon" href="/kochwelt/img/logo_small.png" type="image/png">
 
     <link rel="stylesheet" href="../css/style.css">
     <link rel="stylesheet" href="../css/quesadilla.css">
-    <link rel="shortcut icon" href="./img/logo_small.png" type="image/x-icon">
 </head>
 
-<body id="loadingList">
+<body id="loadingMyList">
 
     <section>
         <header class="outer-padding">
             <!-- Logo -->
             <div>
+                <a href="../html/start.html">
                 <img class="header-logo" src="/kochwelt/img/logo.png" alt="Kochwelt Logo">
+                </a>
             </div>
 
             <!-- Desktop-Navigation (> 950px) -->
@@ -51,8 +52,9 @@
     </section>
 
     <h2 class="outer-padding">Quesadilla</h2>
-
-    <img class="outer-padding recipe-image" src="/kochwelt/img/quesadilla.png" alt="Quesadilla">
+    <div class="outer-padding">
+    <img class="recipe-image" src="/kochwelt/img/quesadilla.png" alt="Enchiladas">
+    </div>
 
     <div class="recipe-info outer-padding">
         <div class="bg-grey">
@@ -80,8 +82,8 @@
     </div>
 
     <section>
-        <h3 class="outer-padding">Für die Füllung:</h3>
-        <ul class="outer-padding" id="filling"></ul>
+        <h3 class="outer-padding">Für die Füllung:</h3>    
+        <ul class="outer-padding" id="fillingAmount"></ul>  
         <h3 class="outer-padding">Für die Sauce:</h3>
         <ul class="outer-padding" id="sauce"></ul>
         <h3 class="outer-padding">Zubereitung:</h3>
@@ -100,24 +102,31 @@
 
     <section class="outer-padding">
         <h3 class="subheader">1. Füllung vorbereiten:</h3>
-        <p>Geriebenen Käse (125 g) in eine Schüssel geben. Zwiebel (30 g), rote Paprika (50 g), grüne Paprika (50 g) und 
-           Champignons (30 g) klein schneiden. Alles mit Mais (30 g) und Kidneybohnen (30 g) vermischen. 
-           Die Gewürze (Paprikapulver, Kreuzkümmel, Chilipulver, je 1 g) hinzufügen und gut vermengen.</p>
-    
-        <h3 class="subheader">2. Quesadillas zusammenstellen:</h3>
-        <p>Eine Tortilla-Wrap (ca. 25 cm Durchmesser) in einer Pfanne bei mittlerer Hitze erwärmen. Eine Hälfte mit der 
-           vorbereiteten Füllung belegen, dann die andere Hälfte darüberklappen. Leicht andrücken und 2–3 Minuten braten, 
-           bis der Käse schmilzt. Wenden und die andere Seite ebenfalls goldbraun braten.</p>
-    
-        <h3 class="subheader">3. Servieren:</h3>
-        <p>Die Quesadillas in Dreiecke schneiden und auf einem Teller anrichten. Mit Sauerrahm (100 g) und Guacamole 
-           (50 g) servieren. Guten Appetit!</p>
-    </section>    
+        <p>In einer kleinen Pfanne das Olivenöl erhitzen. Die Zwiebeln und Paprika anbraten, bis sie weich sind. Mais
+            und
+            Bohnen kurz hinzufügen und erwärmen.</p>
+        <h3 class="subheader">2. Zubereitung der Guacamole:</h3>
+        <p>Avocado halbieren, den Kern entfernen und das Fruchtfleisch mit einer Gabel zerdrücken. Limettensaft
+            hinzufügen,
+            dann Tomate, Knoblauch und optional Koriander unterrühren. Mit Salz, Pfeffer und eventuell Chilli
+            abschmecken. </p>
+        <h3 class="subheader">3. Quesadillas zusammenstellen:</h3>
+        <p>Eine Tortilla in eine saubere Pfanne legen (ohne Öl). Auf die Hälfte der Tortilla etwas Käse streuen. Die
+            Gemüsefüllung
+            darauf verteilen und mit dem restlichen Käse bedecken. Die andere Hälfte der Tortilla darüberklappen. Bei
+            mittlerer
+            Hitze die Tortilla goldbraun braten, bis der Käse geschmolzen ist. Wenden und die andere Seite ebenfalls
+            goldbraun
+            anbraten..</p>
+        <h3 class="subheader">4. Servieren:</h3>
+        <p>Die Quesadillas in Dreiecke schneiden und auf einem Teller anrichten und Guacamole
+            servieren. Guten Appetit!.</p>
+    </section>
 
     <div class="outer-padding last-recipe-section">
         <span class="recipe-creator">Rezept erstellt von</span>
         <div class="creator">
-            <img class="profile-image" src="/kochwelt/img/profile.png" alt="Bild vom Autor">
+            <img class="profile-image" src="/kochwelt/img/anika.png" alt="Bild vom Autor">
             <span>Anika Schmidt</span>
         </div>
     </div>
@@ -139,8 +148,7 @@
                 </a>
             </div>
     </footer>
-    <script src="/js/tacos.js"></script>
-    <script src="/js/start.js"></script>
+    <script src="/js/quesadillas.js"></script>
 </body>
 
 </html>

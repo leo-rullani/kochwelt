@@ -1,3 +1,94 @@
+.subheader {
+    line-height: 1.5;
+}
+
+.p-text {
+    line-height: 1.5;
+}
+
+.menu-toggle {
+    display: none;
+    flex-direction: column;
+    justify-content: space-between; 
+    width: 30px;
+    height: 24px;
+    cursor: pointer;
+    margin-left: auto;
+}
+
+li {
+    padding-top: 1em;
+    padding-bottom: 1em;
+    padding-left: 1em;
+    border-radius: 10px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.menu-toggle span {
+    width: 100%;
+    height: 3px;
+    background-color: #403b3b;
+    border-radius: 2px;
+    transition: 0.3s;
+}
+
+.resp_menu_box {
+    position: fixed;
+    top: 25px;
+    right: 0;
+    width: 250px;
+    border-radius: 10px 0px 0px 10px;
+    backdrop-filter: blur(10px);
+    height: auto;
+    transform: translateX(0);          
+    transition: all 250ms ease-in-out;
+    z-index: 999;
+    overflow-x: hidden;
+}
+
+.resp_menu_box ul {
+    list-style: none;
+    margin: 2rem;
+    padding: 0;
+}
+
+.resp_menu_box li a {
+    text-decoration: none;
+    color: #403b3b;
+    display: block;
+    margin-bottom: 1rem;
+}
+
+.resp_menu_box li a:hover {
+    color: #008001;
+}
+
+.resp_menu_closed {
+    transform: translateX(100%);
+}
+
+.close-btn {
+    align-self: baseline;
+    background: none;
+    border: none;
+    font-size: 1.5rem;
+    cursor: pointer;
+    margin: 0.5rem;
+}
+
+@media (max-width: 950px) {
+    .desktop-nav {
+        display: none;
+    }
+    .menu-toggle {
+        display: flex;
+        align-items: center;
+    }
+}
+
+
 #impressum {
     display: flex;
     justify-content: space-evenly;
@@ -19,7 +110,16 @@
 }
 
 .impressum-text a {
-    font-size: 1rem
+    font-size: 1rem;
+    text-decoration: none;
+    font-weight: 400;
+}
+
+.impressum-text a:hover {
+    text-decoration: underline;
+    text-decoration-thickness: 2px;
+    text-underline-offset: 4px;
+    color: #008000;
 }
 
 .impressum-adresse {
@@ -44,9 +144,9 @@
     .outer-padding {
         padding-left: 6rem; 
         padding-right: 6rem;
-    }
-    
+    }    
 }
+
 @media (max-width: 900px) {
     #brmedia {
         display: block;
@@ -71,12 +171,12 @@
         font-size: 0.9rem
     }
 }
+
 @media (max-width: 600px) {
     #impressum {
         flex-direction: column;
         align-items: center;    
     }
-
     .impressum-id {
         padding-left: 0;
     }
@@ -84,8 +184,8 @@
         padding-left: 1.5rem; 
         padding-right: 1.5rem;
     }
-
 }
+
     @media (max-width: 460px) {
         .outer-padding {
             padding-left: 0; 
@@ -93,7 +193,5 @@
         }
         #brmedia {
            display: block;
-        }
-        
-        
+        }       
 }

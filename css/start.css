@@ -1,76 +1,3 @@
-/* section-burger-toggle */
-.menu-toggle {
-    display: none;
-    flex-direction: column;
-    justify-content: space-between; 
-    width: 30px;
-    height: 24px;
-    cursor: pointer;
-    margin-left: auto;
-}
-
-.menu-toggle span {
-    width: 100%;
-    height: 3px;
-    background-color: #403b3b;
-    border-radius: 2px;
-    transition: 0.3s;
-}
-
-.resp_menu_box {
-    position: absolute;
-    top: 25px;
-    right: 0;
-    width: 250px;
-    background-color: rgba(247, 245, 245, 0.7);
-    border-radius: 10px 0px 0px 10px;
-    backdrop-filter: blur(10px);
-    height: 20vh;
-    transform: translateX(0);          
-    transition: all 250ms ease-in-out;
-    z-index: 999;
-}
-
-.resp_menu_box ul {
-    list-style: none;
-    margin: 2rem;
-    padding: 0;
-}
-
-.resp_menu_box li a {
-    text-decoration: none;
-    color: #403b3b;
-    display: block;
-    margin-bottom: 1rem;
-}
-
-.resp_menu_box li a:hover {
-    color: #008001;
-}
-
-.resp_menu_closed {
-    transform: translateX(100%);
-}
-
-.close-btn {
-    align-self: baseline;
-    background: none;
-    border: none;
-    font-size: 1.5rem;
-    cursor: pointer;
-    margin: 0.5rem;
-}
-
-@media (max-width: 950px) {
-    .desktop-nav {
-        display: none;
-    }
-    .menu-toggle {
-        display: flex;
-        align-items: center;
-    }
-}
-
 .atf {
     display: flex;
     align-items: center;
@@ -110,24 +37,6 @@
     font-size: 1rem;
     margin-top: 1rem;
     margin-bottom: 4.5rem;
-    line-height: 1.5;
-}
-
-.rezept-button {
-    text-align: center;
-    width: 40%; 
-    max-width: 12.5rem; 
-    padding: 0.8rem 1.5rem; 
-    background-color: #008001;
-    color: white;
-    font-size: 1rem;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-}
-
-.rezept-button:hover {
-    background-color: darkgreen;
 }
 
 /* section mexican-food*/
@@ -201,7 +110,6 @@
 .comparison-text {
     flex: 1;
     font-size: 1rem;
-    line-height: 1.5;
     color: black;
 }
 

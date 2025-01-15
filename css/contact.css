@@ -1,0 +1,205 @@
+.subheader {
+    line-height: 1.5;
+}
+
+.p-text {
+    line-height: 1.5;
+}
+
+.menu-toggle {
+    display: none;
+    flex-direction: column;
+    justify-content: space-between; 
+    width: 30px;
+    height: 24px;
+    cursor: pointer;
+    margin-left: auto;
+}
+
+li {
+    padding-top: 1em;
+    padding-bottom: 1em;
+    padding-left: 1em;
+    border-radius: 10px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.menu-toggle span {
+    width: 100%;
+    height: 3px;
+    background-color: #403b3b;
+    border-radius: 2px;
+    transition: 0.3s;
+}
+
+.resp_menu_box {
+    position: fixed;
+    top: 25px;
+    right: 0;
+    width: 250px;
+    background-color: rgba(247, 245, 245, 0.7);
+    border-radius: 10px 0px 0px 10px;
+    backdrop-filter: blur(10px);
+    height: auto;
+    transform: translateX(0);          
+    transition: all 250ms ease-in-out;
+    z-index: 999;
+    overflow-x: hidden;
+}
+
+.resp_menu_box ul {
+    list-style: none;
+    margin: 2rem;
+    padding: 0;
+}
+
+.resp_menu_box li a {
+    text-decoration: none;
+    color: #403b3b;
+    display: block;
+    margin-bottom: 1rem;
+}
+
+.resp_menu_box li a:hover {
+    color: #008001;
+}
+
+.resp_menu_closed {
+    transform: translateX(100%);
+}
+
+.close-btn {
+    align-self: baseline;
+    background: none;
+    border: none;
+    font-size: 1.5rem;
+    cursor: pointer;
+    margin: 0.5rem;
+}
+
+@media (max-width: 950px) {
+    .desktop-nav {
+        display: none;
+    }
+    .menu-toggle {
+        display: flex;
+        align-items: center;
+    }
+}
+
+#contacts {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex: 1;
+    padding: 20px;
+}
+
+.contactinput {
+    background-color: #DCDCDC;
+    border-radius: 12px;
+    padding: 16px;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    max-width: 500px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.contactinput h2 {
+    text-align: center;
+    margin-bottom: 16px;
+    font-size: 24px;
+}
+
+.contactinput label {
+    font-size: 16px;
+    margin-bottom: 8px;
+}
+
+input, textarea {
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    padding: 12px;
+    font-size: 16px;
+    margin-bottom: 16px;
+    width: 100%;
+}
+
+/*#input-button {
+    background-color: #008000;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    padding: 12px;
+    font-size: 16px;
+    cursor: pointer;
+    align-self: center;
+    transition: background-color 0.3s ease;
+}*/
+
+#input-button {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#text-area {
+    resize: vertical;
+    min-height: 150px;
+}
+
+@media (max-width: 900px) {
+    .outer-padding {
+        padding-left: 4rem;
+        padding-right: 4rem;
+    }
+}
+
+@media (max-width: 600px) {
+    .outer-padding {
+        padding-left: 2rem;
+        padding-right: 2rem;
+    }
+
+    .contactinput h2 {
+        font-size: 20px;
+    }
+
+    input, textarea {
+        font-size: 14px;
+        padding: 10px;
+    }
+
+    #input-button {
+        font-size: 14px;
+        padding: 10px;
+        width: 50%;
+    }
+}
+
+@media (max-width: 400px) {
+    .outer-padding {
+        padding-left: 1rem;
+        padding-right: 1rem;
+    }
+
+    .contactinput {
+        padding: 12px;
+    }
+
+    .contactinput h2 {
+        font-size: 18px;
+    }
+
+    input, textarea {
+        font-size: 12px;
+        padding: 8px;
+    }
+
+    #input-button {
+        font-size: 12px;
+        padding: 8px;
+    }
+}
